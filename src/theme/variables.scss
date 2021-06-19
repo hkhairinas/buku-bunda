@@ -4,12 +4,12 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #ff8000;
-  --ion-color-primary-rgb: 255, 128, 0;
-  --ion-color-primary-contrast: #000000;
-  --ion-color-primary-contrast-rgb: 0, 0, 0;
-  --ion-color-primary-shade: #e07100;
-  --ion-color-primary-tint: #ff8d1a;
+  --ion-color-primary: #3880ff;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #3171e0;
+  --ion-color-primary-tint: #4c8dff;
 
   /** secondary **/
   --ion-color-secondary: #3dc2ff;
@@ -74,6 +74,14 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+    /** orange **/
+    --ion-color-orange: #ff8000;
+    --ion-color-orange-rgb: 255, 128, 0;
+    --ion-color-orange-contrast: #000000;
+    --ion-color-orange-contrast-rgb: 0, 0, 0;
+    --ion-color-orange-shade: #e07100;
+    --ion-color-orange-tint: #ff8d1a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -83,12 +91,12 @@
    */
 
   body {
-    --ion-color-primary: #ff8000;
-    --ion-color-primary-rgb: 255, 128, 0;
-    --ion-color-primary-contrast: #000000;
-    --ion-color-primary-contrast-rgb: 0, 0, 0;
-    --ion-color-primary-shade: #e07100;
-    --ion-color-primary-tint: #ff8d1a;
+    --ion-color-primary: #3880ff;
+    --ion-color-primary-rgb: 56, 128, 255;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: #3171e0;
+    --ion-color-primary-tint: #4c8dff;
 
     --ion-color-secondary: #50c8ff;
     --ion-color-secondary-rgb: 80,200,255;
@@ -145,6 +153,13 @@
     --ion-color-light-contrast-rgb: 255,255,255;
     --ion-color-light-shade: #1e2023;
     --ion-color-light-tint: #383a3e;
+
+    --ion-color-orange: #ff8000;
+    --ion-color-orange-rgb: 255, 128, 0;
+    --ion-color-orange-contrast: #000000;
+    --ion-color-orange-contrast-rgb: 0, 0, 0;
+    --ion-color-orange-shade: #e07100;
+    --ion-color-orange-tint: #ff8d1a;
   }
 
   /*

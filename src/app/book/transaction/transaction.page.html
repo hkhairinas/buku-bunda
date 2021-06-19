@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Transaksi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <form [formGroup]="createTrxForm" (submit)="createTrx()">
+      <ion-card>
+        <ion-card-content>
+          <ion-radio-group formControlName="trxType">
+            <ion-header>
+              <ion-label>Tipe Transaksi</ion-label>
+            </ion-header>
+            <ion-row>
+              <ion-col>
+                <ion-item color="success">
+                  <ion-label> Penjualan </ion-label>
+                  <ion-radio value="Penjualan"></ion-radio>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item color="danger">
+                  <ion-label> Pengeluaran </ion-label>
+                  <ion-radio value="Pengeluaran"></ion-radio>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-radio-group>
+        </ion-card-content>
+      </ion-card>
+      <section>
+        <ion-item>
+          <ion-label>Tanggal Transaksi</ion-label>
+          <ion-datetime formControlName="dateTrx" displayFormat="DD/MM/YYYY" placeholder="Pilih Tanggal"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Nama</ion-label>
+          <ion-input formControlName="description" type="text" placeholder="Nama Produk"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Total</ion-label>
+          <ion-input formControlName="amount" type="number" placeholder="Rp."></ion-input>
+        </ion-item>
+      </section>
+
+      <section>
+        <ion-button expand="block" type="submit" [disabled]="!createTrxForm.valid">
+          <ion-icon slot="start" name="add"></ion-icon>
+          Tambah Transaksi
+        </ion-button>
+      </section>
+    </form>
+</ion-content>
