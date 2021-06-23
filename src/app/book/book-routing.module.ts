@@ -9,14 +9,6 @@ const routes: Routes = [
     component: BookPage
   },
   {
-    path: 'about',
-    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
-  },
-  {
-    path: 'setting',
-    loadChildren: () => import('./setting/setting.module').then( m => m.SettingPageModule)
-  },
-  {
     path: 'transaction',
     loadChildren: () => import('./transaction/transaction.module').then( m => m.TransactionPageModule)
   },

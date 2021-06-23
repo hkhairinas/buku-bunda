@@ -30,7 +30,9 @@
     "@ionic-native/splash-screen": "^5.33.1",
     "@ionic/angular": "^5.5.2",
     "cordova-plugin-splashscreen": "^6.0.0",
+    "date-fns": "^2.22.1",
     "firebase": "^8.6.8",
+    "gh-pages": "^3.2.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"

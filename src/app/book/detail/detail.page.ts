@@ -40,7 +40,7 @@ export class DetailPage implements OnInit {
           text: 'Okay',
           handler: () => {
             this.firestoreService.deleteTrx(trxId).then(() => {
-              this.router.navigateByUrl('');
+              this.router.navigateByUrl('book');
             });
           },
         },

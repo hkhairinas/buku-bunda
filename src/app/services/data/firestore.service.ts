@@ -15,7 +15,7 @@ export class FirestoreService {
     description: string,
     amount: number,
     type: string,
-    date: Date,
+    date: string,
   ): Promise<void> {
     const trxId = this.firestore.createId();
     return this.firestore.doc(`transaction/${trxId}`).set({
@@ -34,8 +34,12 @@ export class FirestoreService {
    getTrxDetail(trxId: string): Observable<Book>{
      return this.firestore.collection('transaction').doc<Book>(trxId).valueChanges();
    }
+   //Mengupdate Data
+
    //Menghapus Data
    deleteTrx(trxId: string): Promise<void>{
      return this.firestore.doc(`transaction/${trxId}`).delete();
    }
+
+
 }

@@ -17,11 +17,14 @@ import { ModalController } from '@ionic/angular';
 })
 export class BookPage implements OnInit {
   public trxList: Observable<Book[]>;
+  public list: Observable<Book[]>;
 
   constructor(
     private firestoreService: FirestoreService,
-    private firestore: AngularFirestore,
-  ) { }
+    private db: AngularFirestore,
+  ) {
+    // this.list = db.collection('transaction', ref => ref.orderBy('type'));
+   }
 
   ngOnInit() {
     this.trxList = this.firestoreService.getTrx();

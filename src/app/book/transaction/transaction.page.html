@@ -35,7 +35,7 @@
       <section>
         <ion-item>
           <ion-label>Tanggal Transaksi</ion-label>
-          <ion-datetime formControlName="dateTrx" displayFormat="DD/MM/YYYY" placeholder="Pilih Tanggal"></ion-datetime>
+          <ion-datetime formControlName="dateTrx" min="2010" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" placeholder="Pilih Tanggal"></ion-datetime>
         </ion-item>
 
         <ion-item>
@@ -51,8 +51,7 @@
 
       <section>
         <ion-button expand="block" type="submit" [disabled]="!createTrxForm.valid">
-          <ion-icon slot="start" name="add"></ion-icon>
-          Tambah Transaksi
+          Simpan
         </ion-button>
       </section>
     </form>

@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoadingController, AlertController } from '@ionic/angular';
 import { FirestoreService } from 'src/app/services/data/firestore.service';
+import { format } from 'date-fns';
 
 @Component({
   selector: 'app-transaction',
@@ -31,14 +32,14 @@ export class TransactionPage implements OnInit {
      const description = this.createTrxForm.value.description;
      const amount = this.createTrxForm.value.amount;
      const type = this.createTrxForm.value.trxType;
-     const date = this.createTrxForm.value.dateTrx;
+     const date = format(new Date(this.createTrxForm.value.dateTrx), 'yyyy-MM-dd');
 
      this.firestoreService
      .createTrx(description, amount, type, date)
      .then(
        () => {
          loading.dismiss().then(() => {
-           this.router.navigateByUrl('');
+           this.router.navigateByUrl('book');
          });
        },
        error => {
